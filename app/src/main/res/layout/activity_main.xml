@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flexbox_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:alignContent="flex_start"
+        app:alignItems="center"
+        app:flexWrap="wrap">
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="@color/colorAccent"
+            android:text="我们呢" />
+
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="我们呢" />
+
+        <TextView
+            android:id="@+id/textview3"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:background="@color/colorPrimary"
+            android:text="我们呢" />
+        <TextView
+            android:id="@+id/textview33"
+            android:layout_width="50dp"
+            android:layout_height="90dp"
+            android:background="@color/colorPrimary"
+            android:text="我们呢" />
+
+        <TextView
+            android:id="@+id/textview5"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:background="@color/colorAccent"
+            android:text="我们呢" />
+
+        <TextView
+            android:id="@+id/textview6"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="我们呢" />
+
+        <TextView
+            android:id="@+id/textview7"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:background="@color/colorPrimary"
+            android:text="我们呢" />
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
