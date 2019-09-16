@@ -19,22 +19,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        FlexboxLayout flexboxLayout = (FlexboxLayout) findViewById(R.id.flexbox_layout);
-//        flexboxLayout.setFlexDirection(FlexDirection.ROW);
-//
-//        View view = flexboxLayout.getChildAt(0);
-//        FlexboxLayout.LayoutParams lp = (FlexboxLayout.LayoutParams) view.getLayoutParams();
-//        lp.setOrder(-1);
-//        lp.setFlexGrow(2);
-//        view.setLayoutParams(lp);
-
         initRecyclerView();
     }
 
-
     private void initRecyclerView() {
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
-        FlexboxLayoutManager manager = new FlexboxLayoutManager(MainActivity.this);
+        FlexboxLayoutManager manager = new FlexboxLayoutManager(MainActivity.this) {
+            @Override
+            public boolean canScrollVertically() {
+                return true;
+            }
+        };
         //设置主轴排列方式
         manager.setFlexDirection(FlexDirection.ROW);
         //设置是否换行

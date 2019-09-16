@@ -19,7 +19,7 @@ import java.util.List;
  * on 2019/9/6
  */
 public class FlexBoxAdapter extends RecyclerView.Adapter<FlexBoxAdapter.ViewHolder> {
-    List<String> mlist = Arrays.asList("我们", "世界真的没脸", "你们dfd辅导费dfd辅导费的", "android", "Java", "Html", "sqlite", "哈哈哈哈哈哈", "你们dfd", "我诶");
+    List<String> mlist = Arrays.asList("我们", "世界真的没脸", "你们dfd辅导费", "android", "Java", "Html", "sqlite", "哈哈哈android java 哈哈哈", "你们dfd", "我诶","我们", "世界真的没脸", "你们dfd辅导费", "android", "Java", "Html", "sqlite", "哈哈哈android java 哈哈哈", "你们dfd", "我诶");
 
     @NonNull
     @Override
@@ -36,13 +36,6 @@ public class FlexBoxAdapter extends RecyclerView.Adapter<FlexBoxAdapter.ViewHold
                 mListener.onClick(mlist.get(position));
             }
         });
-
-        ViewGroup.LayoutParams lp = holder.tvName.getLayoutParams();
-        if (lp instanceof FlexboxLayoutManager.LayoutParams) {
-            FlexboxLayoutManager.LayoutParams flexboxLp =
-                    (FlexboxLayoutManager.LayoutParams) holder.tvName.getLayoutParams();
-            flexboxLp.setFlexGrow(1.0f);
-        }
     }
 
     interface OnClickListener {
